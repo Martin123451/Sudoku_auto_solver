@@ -7,9 +7,9 @@ import pyautogui
 from SudokuSolver import SudokuSolver
 
 def main():
-    # Make sure alt-tabbing switches to the browser where sudoku.com is open
+    # Cambio de pestaña a sudoku.com
     pyautogui.hotkey("alt", "tab", interval=0.1)
-    # Take a screenshot of the screen and find the sudoku
+    # Se hace un screenshot of the screen and find the sudoku
     screenshot = pyautogui.screenshot()
     screenshot = cv2.cvtColor(np.array(screenshot), cv2.COLOR_RGB2BGR)
     preprocessed = preprocess(screenshot)
